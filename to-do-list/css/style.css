@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* === ESTILOS DA PÁGINA DE LOGIN === */
+
+/* Classe para o fundo da página de login (aplicada no <main>) */
+.login-page-background {
+  background-color: #f8f9fa; 
+}
+
+/* Container do formulário (usando classe adicionada .login-container-card) */
+.login-container-card {
+  border: 1px solid #e9ecef; 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07) !important; 
+}
+/* Aumenta o padding em telas maiores (Bootstrap: p-md-5) */
+@media (min-width: 768px) {
+    .login-container-card {
+        padding: 3rem !important;
+    }
+}
+
+
+/* Título H1 (Bootstrap já tem text-center, mb-4) */
+.login-container-card h1.h3 { 
+  color: #343a40;
+  font-weight: 600;
+}
+
+/* Labels (usando .form-label do Bootstrap) */
+.form-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #495057;
+}
+
+/* Inputs (usando .form-control do Bootstrap) */
+.form-control {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.form-control:focus {
+  border-color: #80bdff; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.2);
+  background-color: #fff; 
+}
+
+/* Botão personalizado (usando .btn-login-custom) */
+.btn-login-custom {
+  padding: 0.8rem 1rem;
+  background-color: #007bff; 
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-top: 1rem; 
+  letter-spacing: 0.2px;
+}
+
+.btn-login-custom:hover {
+  background-color: #0056b3; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-login-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); 
+}
+
+/* Estilo para links opcionais */
+.login-container-card .text-center a {
+    color: #007bff;
+    font-size: 0.875rem;
+}
+.login-container-card .text-center a:hover {
+    text-decoration: underline !important; 
+}
+
+
+/* === ESTILOS DA TO-DO LIST  === */
+
+/* Container da To-Do List */
+.todo-container {
+  width: 100%;
+  max-width: 500px;  
+  margin: 2rem auto;
+  background: #fff;
+  padding: 3rem; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #dee2e6; 
+}
+
+/* Título */
+.todo-container h1 {
+  text-align: center;
+  margin-bottom: 2rem; 
+  font-size: 2rem;
+  color: #4f46e5; 
+}
+
+/* Formulário To-Do */
+#taskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  margin-bottom: 2rem;
+}
+
+#taskForm input {
+  width: 100%;
+  padding: 0.9rem 1rem; 
+  font-size: 1rem; 
+  border: 1px solid #ced4da; 
+  border-radius: 6px; 
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#taskForm input:focus {
+  outline: none;
+  border-color: #4f46e5; 
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25); 
+}
+
+#taskForm button {
+  width: 100%;
+  padding: 0.9rem 1rem; 
+  font-size: 1rem; 
+  background: #4f46e5; 
+  color: #fff;
+  border: none;
+  border-radius: 6px; 
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  
+}
+
+#taskForm button:hover {
+  background: #4338ca; 
+}
+
+/* Lista de tarefas */
+ul#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem; 
+  overflow-y: auto; 
+  max-height: 40vh; 
+}
+
+ul#taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e9ecef; 
+  padding: 0.8rem 1rem; 
+  margin-bottom: 0.75rem; 
+  border-radius: 6px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+ul#taskList li:hover {
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+ul#taskList li span {
+  flex: 1;
+  margin: 0 0.75rem;
+  word-break: break-word;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+ul#taskList li input[type="checkbox"] {
+  transform: scale(1.2); 
+  margin-right: 0.75rem;
+  cursor: pointer;
+  accent-color: #4f46e5; 
+}
+
+ul#taskList li input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #6c757d; 
+}
+
+/*Excluir tarefa*/
+ul#taskList li button {
+  padding: 0.4rem 0.8rem; 
+  background: #dc3545; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem; 
+  line-height: 1; 
+  transition: background-color 0.2s;
+}
+
+ul#taskList li button:hover {
+  background: #c82333; 
+}
+
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 767.98px) {
+    
+}
+
+@media (max-width: 480px) {
+  
+  .todo-container {
+    padding: 1.5rem; 
+    margin: 1rem auto; 
+  }
+
+  #taskForm {
+    gap: 0.8rem; 
+  }
+
+  
+  .login-container-card {
+      padding: 1.5rem !important; 
+      margin-left: 1rem; 
+      margin-right: 1rem;
+  }
+  .login-container-card h1.h3 {
+      font-size: 1.5rem; 
+  }
+}
